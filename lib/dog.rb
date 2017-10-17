@@ -44,6 +44,9 @@ class Dog
     DB[:conn].execute(sql, x).map do |row|
       self.find_or_create_by(row)
     end.first
+  end
+
+  def self.find_or_create_by(name:,breed:)
     
   end
 
