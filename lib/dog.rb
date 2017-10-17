@@ -58,7 +58,9 @@ class Dog
   end
 
   def self.new_from_db(row)
-    
+    new_dog = self.new(row[1],row[2])
+    new_dog.id = row[0]
+    new_student
   end
 
   def save
