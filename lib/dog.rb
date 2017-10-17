@@ -42,9 +42,9 @@ class Dog
     SQL
 
     DB[:conn].execute(sql, x).map do |row|
-      self.new_from_db(row)
+      self.find_or_create_by(row)
     end.first
-
+    
   end
 
   def save
