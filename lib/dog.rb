@@ -57,6 +57,10 @@ class Dog
     dog
   end
 
+  def self.new_from_db(row)
+    
+  end
+
   def save
     if self.id
       self.update
